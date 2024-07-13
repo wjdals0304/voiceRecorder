@@ -32,6 +32,9 @@
 		EA84B6912C3A56170051E866 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84B6902C3A56170051E866 /* Double+Extensions.swift */; };
 		EA84B6932C3A56250051E866 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84B6922C3A56250051E866 /* Int+Extensions.swift */; };
 		EA84B6982C3A568E0051E866 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84B6972C3A568E0051E866 /* Time.swift */; };
+		EAE210772C42609300A60AD6 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE210762C42609300A60AD6 /* TodoView.swift */; };
+		EAE2107A2C42656A00A60AD6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE210792C42656A00A60AD6 /* Todo.swift */; };
+		EAE2107C2C42666200A60AD6 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2107B2C42666200A60AD6 /* TodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		EA84B6902C3A56170051E866 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		EA84B6922C3A56250051E866 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		EA84B6972C3A568E0051E866 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		EAE210762C42609300A60AD6 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		EAE210792C42656A00A60AD6 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		EAE2107B2C42666200A60AD6 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,8 @@
 		EA6D515E2C3C1137009B6450 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				EAE210762C42609300A60AD6 /* TodoView.swift */,
+				EAE2107B2C42666200A60AD6 /* TodoViewModel.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 		EA84B68C2C3A557D0051E866 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EAE210782C42656100A60AD6 /* Todo */,
 				EA6D515A2C3C10B0009B6450 /* Home */,
 				EA84B6962C3A567E0051E866 /* Timer */,
 				EA84B6812C3A23170051E866 /* Onboarding */,
@@ -331,6 +340,14 @@
 				EA84B6972C3A568E0051E866 /* Time.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		EAE210782C42656100A60AD6 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				EAE210792C42656A00A60AD6 /* Todo.swift */,
+			);
+			path = Todo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,10 +483,12 @@
 			files = (
 				EA84B67E2C359BA90051E866 /* OnboardingVIew.swift in Sources */,
 				EA84B6832C3A23300051E866 /* OnboardingContent.swift in Sources */,
+				EAE210772C42609300A60AD6 /* TodoView.swift in Sources */,
 				EA6D51572C3C0D0B009B6450 /* HomeView.swift in Sources */,
 				EA6D51622C3C19F9009B6450 /* TodoListViewModel.swift in Sources */,
 				EA84B68F2C3A56030051E866 /* Date+Extensions.swift in Sources */,
 				EA84B64C2C3593F20051E866 /* ContentView.swift in Sources */,
+				EAE2107A2C42656A00A60AD6 /* Todo.swift in Sources */,
 				EA84B6912C3A56170051E866 /* Double+Extensions.swift in Sources */,
 				EA84B68B2C3A545E0051E866 /* Memo.swift in Sources */,
 				EA84B6982C3A568E0051E866 /* Time.swift in Sources */,
@@ -482,6 +501,7 @@
 				EA84B6862C3A54010051E866 /* Path.swift in Sources */,
 				EA6D515C2C3C10B9009B6450 /* Tab.swift in Sources */,
 				EA84B6802C359BD60051E866 /* OnboardingViewModel.swift in Sources */,
+				EAE2107C2C42666200A60AD6 /* TodoViewModel.swift in Sources */,
 				EA84B6882C3A540B0051E866 /* PathType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

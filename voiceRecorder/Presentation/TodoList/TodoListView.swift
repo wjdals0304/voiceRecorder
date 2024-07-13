@@ -14,6 +14,8 @@ struct TodoListView: View {
         ZStack {
             
             VStack {
+                
+                
                 TitleView()
                     .padding(.top, 20)
                 AnnouncementView()

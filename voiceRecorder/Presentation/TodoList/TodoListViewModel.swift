@@ -7,12 +7,21 @@
 
 import SwiftUI
 
-struct TodoListViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+final class TodoListViewModel: ObservableObject {
+    @Published var todos: [Todo]
+    
+    init(
+        todos: [Todo] = []
+    ) {
+        self.todos = todos
     }
+    
 }
 
-#Preview {
-    TodoListViewModel()
+extension TodoListViewModel {
+    
+    func addTodo(_ todo: Todo) {
+        todos.append(todo)
+    }
+    
 }

@@ -9,11 +9,11 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     @Published var selectedTab: Tab
-     
-    init(selectedTab: Tab) {
+    
+    init(
+        selectedTab: Tab = .voiceRecorder
+    ) {
         self.selectedTab = selectedTab
     }
-
+    
 }
-
-

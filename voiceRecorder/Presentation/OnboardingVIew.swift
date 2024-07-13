@@ -12,12 +12,18 @@ struct OnboardingView: View {
     @StateObject private var pathModel = PathModel()
     
     var body: some View {
-        OnboardingContentView(onboardingViewModel: onboardingViewModel)
-//        NavigationStack(path: $pathModel.paths) {
-//           OnboardingContentView(onboardingViewModel: onboardingViewModel)
-//                .navigationDestination(for: PathType.self, destination: { pathType in
-//                })
-//        }
+        NavigationStack(path: $pathModel.paths) {
+            OnboardingContentView(onboardingViewModel: onboardingViewModel)
+                .navigationDestination(for: PathType.self) { pathType in
+                    switch pathType {
+                    case .homeView:
+                        HomeView()
+                            .navigationBarBackButtonHidden()
+                    default:
+                        HomeView()
+                    }
+                }
+        }.environmentObject(pathModel)
     }
 }
 

@@ -21,6 +21,7 @@ struct HomeView: View {
                         )
                     }.tag(Tab.todoList)
             }
+            .environmentObject(homeViewModel)
             
             SeperatorLineView()
             

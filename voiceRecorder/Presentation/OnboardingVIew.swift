@@ -10,7 +10,8 @@ import SwiftUI
 struct OnboardingView: View {
     @StateObject private var onboardingViewModel = OnboardingViewModel()
     @StateObject private var pathModel = PathModel()
-    
+    @StateObject private var todoListViewModel = TodoListViewModel()
+
     var body: some View {
         NavigationStack(path: $pathModel.paths) {
             OnboardingContentView(onboardingViewModel: onboardingViewModel)
@@ -19,6 +20,12 @@ struct OnboardingView: View {
                     case .homeView:
                         HomeView()
                             .navigationBarBackButtonHidden()
+                            .environmentObject(todoListViewModel)
+                            
+                    case .todoView:
+                        TodoView()
+                            .navigationBarBackButtonHidden()
+                            .environmentObject(todoListViewModel)
                     default:
                         HomeView()
                     }

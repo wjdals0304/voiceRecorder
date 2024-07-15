@@ -9,11 +9,19 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     @Published var selectedTab: Tab
+    @Published var todosCount: Int
     
     init(
-        selectedTab: Tab = .voiceRecorder
+        selectedTab: Tab = .voiceRecorder,
+        todosCount: Int = 0
     ) {
         self.selectedTab = selectedTab
+        self.todosCount = todosCount
     }
-    
+}
+
+extension HomeViewModel {
+    func setTodosCount(_ count: Int) {
+      todosCount = count
+    }
 }

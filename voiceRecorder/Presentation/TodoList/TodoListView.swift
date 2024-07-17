@@ -60,10 +60,15 @@ struct TodoListView: View {
 }
 
 private struct TitleView: View {
+    @EnvironmentObject private var todoListViewModel: TodoListViewModel
+
     fileprivate var body: some View {
-        
         HStack {
-            Text("To do list를 \n추가해 보세요.")
+            if todoListViewModel.todos.isEmpty {
+                Text("To do list를\n추가해 보세요.")
+            } else {
+                Text("To do list \(todoListViewModel.todos.count)개가\n있습니다.")
+            }
             Spacer()
         }
         .font(.system(size: 30,weight: .bold))

@@ -20,6 +20,16 @@ struct HomeView: View {
                             homeViewModel.selectedTab == .todoList ? "todoIcon_selected" : "todoIcon"
                         )
                     }.tag(Tab.todoList)
+                
+                MemoListView()
+                  .tabItem {
+                    Image(
+                      homeViewModel.selectedTab == .memo
+                      ? "memoIcon_selected"
+                      : "memoIcon"
+                    )
+                  }
+                  .tag(Tab.memo)
             }
             .environmentObject(homeViewModel)
             

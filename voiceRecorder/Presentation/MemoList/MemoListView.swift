@@ -42,8 +42,22 @@ struct MemoListView: View {
             WriteMemoBtnView()
                 .padding(.trailing, 20)
                 .padding(.bottom, 50)
-            
         }
+        .alert(
+            "메모 \(memoListViewModel.removeMemoCount)개 삭제하시겠습니다까?",
+            isPresented: $memoListViewModel.isDisplayRemoveMemoAlert
+        ) {
+            Button("삭제", role: .destructive) {
+                memoListViewModel.removeBtnTapped()
+            }
+            Button("취소", role: .cancel) {}
+        }
+        .onChange(
+            of: memoListViewModel.memos,
+            perform: { memos in
+                homeViewModel.setMemosCount(memos.count)
+            }
+        )
     }
     
 }

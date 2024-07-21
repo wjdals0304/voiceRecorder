@@ -36,6 +36,8 @@
 		EA84B6912C3A56170051E866 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84B6902C3A56170051E866 /* Double+Extensions.swift */; };
 		EA84B6932C3A56250051E866 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84B6922C3A56250051E866 /* Int+Extensions.swift */; };
 		EA84B6982C3A568E0051E866 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84B6972C3A568E0051E866 /* Time.swift */; };
+		EACA172F2C4CDA5F003D79AC /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA172E2C4CDA5F003D79AC /* TimerView.swift */; };
+		EACA17312C4CDA65003D79AC /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA17302C4CDA65003D79AC /* TimerViewModel.swift */; };
 		EAE210772C42609300A60AD6 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE210762C42609300A60AD6 /* TodoView.swift */; };
 		EAE2107A2C42656A00A60AD6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE210792C42656A00A60AD6 /* Todo.swift */; };
 		EAE2107C2C42666200A60AD6 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2107B2C42666200A60AD6 /* TodoViewModel.swift */; };
@@ -91,6 +93,8 @@
 		EA84B6902C3A56170051E866 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		EA84B6922C3A56250051E866 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		EA84B6972C3A568E0051E866 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		EACA172E2C4CDA5F003D79AC /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		EACA17302C4CDA65003D79AC /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		EAE210762C42609300A60AD6 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		EAE210792C42656A00A60AD6 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		EAE2107B2C42666200A60AD6 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 		EA84B6792C3598110051E866 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EACA172D2C4CDA4C003D79AC /* Timer */,
 				EA4B19B32C47ED3900033B5A /* MemoList */,
 				EA6D515D2C3C112F009B6450 /* TodoList */,
 				EA6D51552C3C0CF2009B6450 /* Home */,
@@ -366,6 +371,15 @@
 			isa = PBXGroup;
 			children = (
 				EA84B6972C3A568E0051E866 /* Time.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		EACA172D2C4CDA4C003D79AC /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				EACA172E2C4CDA5F003D79AC /* TimerView.swift */,
+				EACA17302C4CDA65003D79AC /* TimerViewModel.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -509,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACA17312C4CDA65003D79AC /* TimerViewModel.swift in Sources */,
 				EA84B67E2C359BA90051E866 /* OnboardingVIew.swift in Sources */,
 				EA84B6832C3A23300051E866 /* OnboardingContent.swift in Sources */,
 				EAE210772C42609300A60AD6 /* TodoView.swift in Sources */,
@@ -518,6 +533,7 @@
 				EA84B68F2C3A56030051E866 /* Date+Extensions.swift in Sources */,
 				EA4B19B62C47ED6200033B5A /* MemoListView.swift in Sources */,
 				EA84B64C2C3593F20051E866 /* ContentView.swift in Sources */,
+				EACA172F2C4CDA5F003D79AC /* TimerView.swift in Sources */,
 				EA4B19B82C47EF0900033B5A /* MemoListViewModel.swift in Sources */,
 				EAE2107A2C42656A00A60AD6 /* Todo.swift in Sources */,
 				EA84B6912C3A56170051E866 /* Double+Extensions.swift in Sources */,

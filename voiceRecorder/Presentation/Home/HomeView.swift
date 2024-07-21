@@ -30,6 +30,15 @@ struct HomeView: View {
                     )
                   }
                   .tag(Tab.memo)
+                
+                TimerView()
+                    .tabItem {
+                        Image(
+                            homeViewModel.selectedTab == .timer ? "timerIcon_selected" : "timerIcon"
+                        )
+                    }
+                    .tag(Tab.timer)
+                
             }
             .environmentObject(homeViewModel)
             

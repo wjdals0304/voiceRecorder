@@ -39,6 +39,15 @@ struct HomeView: View {
                     }
                     .tag(Tab.timer)
                 
+                SettingView()
+                  .tabItem {
+                    Image(
+                      homeViewModel.selectedTab == .setting
+                      ? "settingIcon_selected"
+                      : "settingIcon"
+                    )
+                  }.tag(Tab.setting)
+                
             }
             .environmentObject(homeViewModel)
             

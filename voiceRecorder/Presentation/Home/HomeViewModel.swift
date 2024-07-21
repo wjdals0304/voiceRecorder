@@ -31,4 +31,8 @@ extension HomeViewModel {
     func setMemosCount(_ count: Int) {
         memosCount = count
     }
+    
+    func changeSelectedTab(_ tab: Tab) {
+        selectedTab = tab
+    }
 }

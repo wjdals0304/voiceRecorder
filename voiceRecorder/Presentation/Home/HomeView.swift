@@ -11,6 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var pathModel: PathModel
     @StateObject private var homeViewModel = HomeViewModel()
     private let todoIcon = "todoIcon"
+    private let memoIcon = "memoIcon"
     var body: some View {
         ZStack {
             TabView(selection: $homeViewModel.selectedTab) {
@@ -26,7 +27,7 @@ struct HomeView: View {
                     Image(
                       homeViewModel.selectedTab == .memo
                       ? "memoIcon_selected"
-                      : "memoIcon"
+                      : memoIcon
                     )
                   }
                   .tag(Tab.memo)

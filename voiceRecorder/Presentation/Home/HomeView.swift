@@ -10,14 +10,14 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var pathModel: PathModel
     @StateObject private var homeViewModel = HomeViewModel()
-    
+    private let todoIcon = "todoIcon"
     var body: some View {
         ZStack {
             TabView(selection: $homeViewModel.selectedTab) {
                 TodoListView()
                     .tabItem {
                         Image(
-                            homeViewModel.selectedTab == .todoList ? "todoIcon_selected" : "todoIcon"
+                            homeViewModel.selectedTab == .todoList ? "todoIcon_selected" : todoIcon
                         )
                     }.tag(Tab.todoList)
                 
